@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f60">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="manifest" href="manifest.json">
+  <title>hello</title>
+</head>
+
+<body>
+  hey
+  <!--<script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCEiye4dXVCTBOTODSyL6fDiLfRhRRmz-k",
+      authDomain: "charlenezell-bcb67.firebaseapp.com",
+      databaseURL: "https://charlenezell-bcb67.firebaseio.com",
+      projectId: "charlenezell-bcb67",
+      storageBucket: "charlenezell-bcb67.appspot.com",
+      messagingSenderId: "887990222496"
+    };
+    firebase.initializeApp(config);
+  </script>-->
+  <script>
+if ('serviceWorker' in navigator) {
+  console.log('Service Worker and Push is supported');
+
+  navigator.serviceWorker.register('sw.js')
+    .then(function (swReg) {
+      console.log('Service Worker is registered', swReg);
+
+
+    })
+    .catch(function (error) {
+      console.error('Service Worker Error', error);
+    });
+} else {
+  console.warn('Push messaging is not supported');
+
+}
+window.addEventListener('beforeinstallprompt', function(e) {
+  // beforeinstallprompt Event fired
+
+  // e.userChoice will return a Promise.
+  // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
+  e.userChoice.then(function(choiceResult) {
+
+    console.log(choiceResult.outcome);
+
+    if(choiceResult.outcome == 'dismissed') {
+      console.log('User cancelled home screen install');
+    }
+    else {
+      console.log('User added to home screen');
+    }
+  });
+});
+  </script>
+</body>
+
+</html>

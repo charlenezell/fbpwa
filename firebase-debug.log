@@ -1,0 +1,14 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      C:\nodejs12.7npm2\node.exe C:\nodejs12.7npm2\node_modules\firebase-tools\bin\firebase serve
+[debug] CLI Version:  3.4.0
+[debug] Platform:     win32
+[debug] Node Version: v6.9.5
+[debug] Time:         Fri Apr 07 2017 17:31:17 GMT+0800 (中国标准时间)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: C:\Users\huangguangyao\Desktop\fbcli
+[info] Public Directory: public
+[info] 
+[info] Server listening at: http://localhost:5000
